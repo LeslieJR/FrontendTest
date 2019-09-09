@@ -46,9 +46,10 @@ function search() {
             userInfo.bio = json.bio;
             userInfo.image = json.avatar_url;
             userInfo.publicRepos = json.public_repos;
+
             // and then the function that does fetchs the repos is called
             // if the user has repos then the fetchRepos function is called, else a message 'No repos for this user is displayed'
-            if (user.publicRepos != 0) {
+            if (userInfo.publicRepos != 0) {
                 fetchRepos();
             } else {
                 var norepos = document.getElementById('repos').style.display = "block";
