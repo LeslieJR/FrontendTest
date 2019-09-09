@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FrontEnd Test</title>
+    <link rel="stylesheet" href="./style/frontend.css" type="text/css" />
+</head>
+
+<body>
+    <div id="loader"></div>
+    <div id="container">
+        <div id="search-container">
+            <form onsubmit="return false">
+                <input type="text" placeholder="Search username..." name="search" id="value" />
+                <button id="search" type="submit">Search</button>
+            </form>
+            <div id="redBox">
+                <p>Does not exist</p>
+            </div>
+            <div id="userInfo">
+                <img id="avatar" src="" alt="avatar" />
+                <div>
+                    <p id="login"></p>
+                    <h1 id="fullName"></h1>
+                    <p id="bio"></p>
+                </div>
+            </div>
+            <div id="repos">
+                <h2>Repositories</h2>
+                <div id="infoRepo">
+                    <div id="repo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="frontend.js"></script>
+</body>
+
+</html>

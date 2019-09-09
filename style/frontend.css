@@ -1,0 +1,260 @@
+/* reset  */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+form,
+input,
+button,
+p,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* end reset */
+
+/* to make it scrollable but hidding the scrollbar */
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    font-family: sans-serif;
+}
+
+form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#container {
+    margin: 65px auto;
+    background-color: #ffffff;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 5px rgb(190, 190, 190);
+
+}
+
+input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-family: sans-serif;
+    width: 360px;
+
+}
+
+#search-container {
+    width: 450px;
+    margin: 0 auto;
+
+}
+
+#search-container button {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    background-color: #f8f8f8;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-left: 9px;
+}
+
+#search-container button:hover {
+    background: #ccc;
+}
+
+#redBox {
+    background-color: #f9dede;
+    border: 1px solid #a33621;
+    border-radius: 3px;
+    height: 50px;
+    display: none;
+    width: 450px;
+
+}
+
+#redBox p {
+    font-family: sans-serif;
+    padding-left: 20px;
+    padding-top: 16px;
+    color: #a33621;
+    font-weight: 600;
+}
+
+#userInfo,
+#repos {
+    display: none;
+    padding-bottom: 20px;
+}
+
+#repos h2 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding-top: 5px;
+    border-bottom: 3px solid black;
+}
+
+#userInfo img {
+    width: 100px;
+}
+
+#userInfo p,
+#userInfo h1 {
+    font-family: sans-serif;
+}
+
+#userInfo h1 {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 12px 0;
+}
+
+#userInfo div {
+
+    padding-left: 17px;
+}
+
+#repo div {
+    display: flex;
+}
+
+.inforepo {
+
+    padding: 20px 10px;
+    border-top: 1px solid black;
+}
+
+.inforepo:first-child {
+    border-top: none;
+
+}
+
+.inforepo div:first-child {
+    font-weight: 600;
+    width: 400px;
+}
+
+.inforepo img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#infoRepo {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+/* loader to display during the data is fetched */
+#loader {
+    display: none;
+    color: #4286d3;
+    font-size: 20px;
+    margin: 300px auto;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation: load4 1.3s infinite linear;
+    animation: load4 1.3s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+@-webkit-keyframes load4 {
+
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+@keyframes load4 {
+
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
